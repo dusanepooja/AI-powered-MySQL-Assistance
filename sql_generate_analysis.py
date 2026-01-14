@@ -14,10 +14,10 @@ llm = ChatGroq(model ="openai/gpt-oss-120b" , api_key = groq_api_key)
 
 # Database Configuration 
 DB_USER = "root"
-DB_PASSWORD = "Poojaroot67"
+DB_PASSWORD = "your database password"
 DB_HOST = "localhost"
 DB_PORT = "3306"
-DB_NAME = "sql_assistant"
+DB_NAME = "your database name"
 
 # create connection engine
 engine = create_engine(f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
@@ -133,3 +133,4 @@ if st.button("Run Analysis"):
                 st.success(answer)
     else:
         st.warning("Please enter a question first.")
+
